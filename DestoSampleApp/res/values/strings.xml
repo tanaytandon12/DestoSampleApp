@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DestoSampleApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- the strings storing the cell names -->
+    <string name="cell1">Cell 1</string>
+    <string name="cell2">Cell 2</string>
+    <string name="cell3">Cell 3</string>
+    <string name="cell4">Cell 4</string>
+    <string name="cell5">Cell 5</string>
+
+    <!-- the string storing the heading and the footer of the table -->
+    <string name="headingText">Select the cell to log the call</string>
+    <string name="title_activity_store">StoreActivity</string>
+    <string name="nameText">Enter the contact name</string>
+    <string name="log">Log It</string>
+    <string name="title_activity_view">ViewActivity</string>
+
+    <string name="view">View all Cell Records</string>
+    
+</resources>

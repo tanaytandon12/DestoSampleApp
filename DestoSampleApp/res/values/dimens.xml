@@ -1,0 +1,18 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- the table margins -->
+    <dimen name="tableTop">50dp</dimen>
+    <dimen name="tableLeft">25dp</dimen>
+
+    <!-- the text size and the padding -->
+    <dimen name="textSize">20dp</dimen>
+    <dimen name="textPadding">10dp</dimen>
+
+    <!-- the form margin top -->
+    <dimen name="formTop">50dp</dimen>
+
+</resources>
