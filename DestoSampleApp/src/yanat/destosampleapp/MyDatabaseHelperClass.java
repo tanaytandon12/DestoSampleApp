@@ -17,7 +17,7 @@ public class MyDatabaseHelperClass extends SQLiteOpenHelper {
 	protected static final String DATABASE_NAME = "ContactsManager";
 
 	// the table name
-	protected static final String TABLE_NAME = "contacts";
+	protected static final String TABLE_NAME = "contacts1";
 
 	// the table column names
 	protected static final String KEY_NAME = "name";
@@ -68,7 +68,7 @@ public class MyDatabaseHelperClass extends SQLiteOpenHelper {
 		values.put(KEY_TYPE, type);
 
 		// insert the rows
-		Log.d("tag", String.valueOf(db.insert(TABLE_NAME, null, values)));
+		 Log.d("tag", String.valueOf(db.insert(TABLE_NAME, null, values)));
 
 		// close the database connection
 		db.close();

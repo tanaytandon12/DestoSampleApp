@@ -78,9 +78,6 @@ public class SlideFragment extends Fragment {
 		// declare the array list to put to the adapter
 		ArrayList<HashMap<String, String>> myList = new ArrayList<HashMap<String, String>>();
 
-		// declare the map to which values are to be added
-		HashMap<String, String> myMap = new HashMap<String, String>();
-
 		try {
 
 			// get the contact cursor
@@ -88,10 +85,12 @@ public class SlideFragment extends Fragment {
 
 			if (null != cursor) {
 
-				Log.d("tag", "below getContact");
+				Log.d("tag", String.valueOf(cursor.getCount()));
 
 				// iterate through the cursor
 				while (cursor.moveToNext()) {
+					// declare the map to which values are to be added
+					HashMap<String, String> myMap = new HashMap<String, String>();
 
 					// add the phone number
 					myMap.put("number", cursor.getString(0));
@@ -113,6 +112,8 @@ public class SlideFragment extends Fragment {
 
 				}
 			} else {
+				// declare the map to which values are to be added
+				HashMap<String, String> myMap = new HashMap<String, String>();
 				// add the phone number
 				myMap.put(MyDatabaseHelperClass.KEY_NUM, "No number exists");
 
@@ -122,7 +123,7 @@ public class SlideFragment extends Fragment {
 				// add the type
 				myMap.put(MyDatabaseHelperClass.KEY_TYPE,
 						"You have not recieved any calls");
-				Log.d("tag", "slide fragment on create");
+				Log.d("tag", "else part");
 
 				// add the map to the array list
 				myList.add(myMap);
@@ -132,6 +133,8 @@ public class SlideFragment extends Fragment {
 			cursor.close();
 
 		} catch (NullPointerException ex) {
+			// declare the map to which values are to be added
+			HashMap<String, String> myMap = new HashMap<String, String>();
 
 			// add the phone number
 			myMap.put(MyDatabaseHelperClass.KEY_NUM, "No number exists");
@@ -146,10 +149,8 @@ public class SlideFragment extends Fragment {
 			// add the map to the array list
 			myList.add(myMap);
 
-			Log.d("tag", "slide fragment on create");
+			Log.d("tag", "null pointer exception part");
 		}
-
-		Log.d("tag", String.valueOf(myList.contains("n")));
 
 		// the list adapter for the list
 		MyListAdapter listAdapter = new MyListAdapter(context, myList);
